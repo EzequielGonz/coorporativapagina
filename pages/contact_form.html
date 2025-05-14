@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Solarix Ingeniería</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Solarix Ingeniería: Servicios de certificación y asesoramiento en energía fotovoltaica para residencias y pequeñas industrias.  Amplia experiencia y conocimiento técnico para optimizar el aprovechamiento de la energía solar.">
+    <meta name="keywords" content="energía solar, energía fotovoltaica, paneles solares, Solarix Ingeniería, certificación solar, asesoramiento solar, Córdoba, Argentina">
+    <meta name="author" content="Solarix Ingeniería">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contacto | Solarix Ingeniería">
+    <meta property="og:description" content="Solarix Ingeniería: Servicios de certificación y asesoramiento en energía fotovoltaica para residencias y pequeñas industrias.  Amplia experiencia y conocimiento técnico para optimizar el aprovechamiento de la energía solar.">
+    <meta property="og:image" content="/public/images/solarix-ingenieria-og-image.webp">
+    <meta property="og:site_name" content="Solarix Ingeniería">
+    <meta property="og:locale" content="es_AR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contacto | Solarix Ingeniería">
+    <meta name="twitter:description" content="Solarix Ingeniería: Servicios de certificación y asesoramiento en energía fotovoltaica para residencias y pequeñas industrias.  Amplia experiencia y conocimiento técnico para optimizar el aprovechamiento de la energía solar.">
+    <meta name="twitter:image" content="/public/images/solarix-ingenieria-og-image.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/metaTags/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/metaTags/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/metaTags/apple-touch-icon.png">
+    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Canonical -->
+    <!-- <link rel="canonical" href="https://andessoftware.com/" /> -->
+<style>
+    .scoup {
+        display: none;
+    }
+</style>
+</head>
+<body class="min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Columna izquierda - Beneficios -->
+        <div class="hidden lg:flex lg:flex-col lg:w-2/5 bg-[#004227] text-gray-100 p-12">
+            <div class="max-w-md mx-auto my-auto">
+            <div class="mb-12">
+                <img src="public/images/logo-solarix-ingenieria.webp" alt="Solarix Ingeniería" class="w-4/5 sm:w-3/5 md:w-2/5 lg:w-1/2 ounded-lg">
+            </div>
+                <h1 class="text-3xl font-bold mb-8">Contáctenos</h1>
+                <p class="text-lg mb-12">Beneficios de colaborar con Solarix Ingeniería:</p>
+                
+                <div class="space-y-8">
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Ahorro Garantizado</h3>
+                            <p>Reduce hasta un 60% en tu factura eléctrica con nuestros sistemas solares certificados.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Instalación Profesional</h3>
+                            <p>Ingenieros certificados por ERSEP garantizan la calidad y seguridad de tu instalación.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start space-x-4">
+                        <div>
+                            <h3 class="text-lg font-semibold mb-2">Servicio Integral</h3>
+                            <p>Nos encargamos de todo: desde el diseño hasta la puesta en marcha de tu sistema solar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna derecha - Formulario -->
+        <div class="w-full md:w-3/5 bg-white p-6 md:p-12 flex flex-col justify-center min-h-screen md:min-h-0 animate__animated animate__fadeIn">
+            <div class="mb-6 md:mb-8 p-2 md:p-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800">Formulario de contacto</h2>
+                <p class="text-gray-600 mt-2">Complete el formulario y nos pondremos en contacto a la brevedad.</p>
+            </div>
+
+            <form id="contactForm" class="p-2 md:p-4 space-y-6" action="/contact" method="POST">
+                <div class="scoup">
+                    <label>Sitio web de su negocio*</label>
+                    <input type="text" 
+                           name="website" 
+                           autocomplete="off" 
+                           tabindex="-1"
+                           value="">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Nombre completo *</label>
+                    <input type="text" name="name" required 
+                           class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                           placeholder="Su nombre completo">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Email *</label>
+                    <input type="email" name="email" required 
+                           class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                           placeholder="su@correo.com">
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+                    
+                    <div class="flex">
+                        <span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-500">
+                            +54
+                        </span>
+                        <input type="tel" name="phone"
+                               class="w-full border border-gray-300 rounded-r-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                               placeholder="123 456 7890"
+                               title="Ingrese un número de teléfono válido">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-gray-700 font-semibold mb-2">Mensaje *</label>
+                    <textarea name="message" required rows="4" 
+                              class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                              placeholder="Describa su consulta"></textarea>
+                </div>
+
+                <input type="hidden" name="source" value="contact_form">
+
+                <button type="submit" 
+                        class="w-full bg-indigo-600 bg-gradient-to-r from-yellow-500 to-yellow-400 text-black px-4 py-2 rounded-md hover:bg-gradient-to-r hover:from-yellow-500 hover:to-orange-700 transition duration-200 py-3 font-semibold rounded-lg p-4 transition duration-300 transform hover:scale-105">
+                    Enviar consulta
+                </button>
+            </form>
+
+            <div class="text-center mt-6 space-y-3">
+                <div class="flex items-center justify-center text-gray-600 space-x-3">
+                    <i data-feather="mail" class="w-4 h-4"></i>
+                    <span>ing.solarix@gmail.com</span>
+                </div>
+                <!-- <div class="flex items-center justify-center text-gray-600 space-x-3">
+                    <i data-feather="phone" class="w-4 h-4"></i>
+                    <span >+56 9 1234 5678</span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Deshabilitar el botón y mostrar estado de carga
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Enviando... <svg class="inline animate-spin h-5 w-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+            
+            const formData = new FormData(form);
+            
+            fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    // Mostrar mensaje de éxito
+                    Swal.fire({
+                        title: '¡Mensaje enviado!',
+                        text: 'Nos pondremos en contacto a la brevedad.',
+                        icon: 'success',
+                        confirmButtonText: 'Entendido',
+                        confirmButtonColor: '#4F46E5'
+                    });
+                    form.reset();
+                } else {
+                    throw new Error(data.message || 'Error al enviar el mensaje');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Mostrar mensaje de error
+                Swal.fire({
+                    title: 'Error',
+                    text: error.message || 'Hubo un problema al enviar su mensaje. Por favor, intente nuevamente.',
+                    icon: 'error',
+                    confirmButtonText: 'Cerrar',
+                    confirmButtonColor: '#4F46E5'
+                });
+            })
+            .finally(() => {
+                // Restaurar el botón
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+
+        feather.replace();
+    </script>
+    
+    <!-- SweetAlert2 para mensajes más atractivos -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooperativa Dalmacio Vélez - Energía y Servicios</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="Cooperativa Dalmacio Vélez: Servicios de energía eléctrica, mantenimiento y asesoría técnica. Más de 30 años brindando soluciones energéticas confiables en Córdoba.">
+  <meta name="keywords" content="cooperativa eléctrica, energía eléctrica, mantenimiento eléctrico, asesoría técnica, Dalmacio Vélez, Córdoba">
+  <meta name="author" content="Cooperativa Dalmacio Vélez">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cooperativa Dalmacio Vélez | Energía y Servicios">
+  <meta property="og:description" content="Servicios de energía eléctrica, mantenimiento y asesoría técnica para tu hogar y negocio. Más de 30 años de experiencia en Córdoba.">
+  <meta property="og:image" content="public/images/cooperativa-og-image.webp">
+  <meta property="og:site_name" content="Cooperativa Dalmacio Vélez">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cooperativa Dalmacio Vélez | Energía y Servicios">
+  <meta name="twitter:description" content="Servicios de energía eléctrica, mantenimiento y asesoría técnica para tu hogar y negocio. Más de 30 años de experiencia en Córdoba.">
+  <meta name="twitter:image" content="public/images/cooperativa-og-image.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="public/images/metaTags/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/images/metaTags/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/images/metaTags/apple-touch-icon.png">
+  
+  <!-- Tailwind & AlpineJS -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./src/output.css" rel="stylesheet">
+  
+  <!-- Feather Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    .hero-gradient {
+      background: linear-gradient(135deg, rgba(5, 150, 105, 0.7) 0%, rgba(4, 120, 87, 0.7) 100%);
+    }
+    .hero-background {
+      background-image: url('https://i.ibb.co/CKnFjmVY/dalmaciovelez.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-background::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #059669;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- WhatsApp Button -->
+  <a href="https://api.whatsapp.com/send?phone=5493534767040&text=Hola,%20quiero%20consultar%20sobre%20sus%20servicios."
+     target="_blank"
+     class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg z-[1000] flex items-center space-x-2 transition-all duration-300 hover:scale-105">
+    <i class="fa-brands fa-whatsapp text-xl"></i>
+    <span>Contactar</span>
+  </a>
+
+  <!-- Top Contact Info (Desktop Only) -->
+  <div class="hidden lg:flex container px-4 text-center text-gray-600 justify-end items-center py-2 space-x-8 w-full bg-white border-b">
+    <p class="text-md flex items-center">
+      <i class="fa-solid fa-location-dot mr-2 text-green-600"></i>
+      Juana Azurduy 270, Dalmacio Vélez Sársfield, Cordoba, Argentina
+    </p>
+    <p class="text-md flex items-center">
+      <i class="fa-solid fa-phone mr-2 text-green-600"></i>
+      353-4298374
+    </p>
+  </div>
+
+  <!-- Navbar Container -->
+  <nav class="bg-white shadow-md sticky top-0 z-50" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+        <div class="flex items-center">
+          <a href="#inicio" class="flex items-center space-x-4">
+            <img src="https://i.ibb.co/99Fjm2Tq/COOP-EDV-FONDO-TRANSPARENTE.png" alt="Cooperativa Dalmacio Vélez" class="h-16 w-auto">
+            <div class="hidden md:block">
+              <h1 class="text-xl font-bold text-gray-800">Cooperativa Dalmacio Vélez</h1>
+              <p class="text-sm text-gray-600">Energía y Servicios</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#inicio" class="nav-link text-gray-700 hover:text-green-600 font-medium">Inicio</a>
+          <a href="#servicios" class="nav-link text-gray-700 hover:text-green-600 font-medium">Servicios</a>
+          <a href="#nosotros" class="nav-link text-gray-700 hover:text-green-600 font-medium">Nosotros</a>
+          <a href="#contacto" class="nav-link text-gray-700 hover:text-green-600 font-medium">Contacto</a>
+          <a href="#contacto" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition duration-300 font-medium">
+            Contáctanos
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button @click="open = !open" class="text-gray-700 hover:text-green-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden" x-show="open" @click.away="open = false" x-transition>
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+        <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md">Inicio</a>
+        <a href="#servicios" class="block px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md">Servicios</a>
+        <a href="#nosotros" class="block px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md">Nosotros</a>
+        <a href="#contacto" class="block px-3 py-2 text-gray-700 hover:text-green-600 hover:bg-gray-50 rounded-md">Contacto</a>
+        <a href="#contacto" class="block px-3 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition duration-300">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-background text-white py-32">
+    <div class="hero-gradient absolute inset-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center hero-content">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 animate__animated animate__fadeIn">
+          Cooperativa Dalmacio Vélez
+        </h1>
+        <p class="text-xl md:text-2xl mb-12 animate__animated animate__fadeIn animate__delay-1s max-w-3xl mx-auto">
+          Más de 30 años brindando servicios de energía eléctrica confiables y soluciones técnicas para tu hogar y negocio
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4 animate__animated animate__fadeIn animate__delay-2s">
+          <a href="#contacto" class="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl">
+            Asociate
+          </a>
+          <a href="#servicios" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition duration-300">
+            Conoce nuestros servicios
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros Section -->
+  <section id="sobre-nosotros" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Sobre Nosotros</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Somos una cooperativa comprometida con el desarrollo de nuestra comunidad a través de la participación colectiva y el trabajo en equipo
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+        <div class="space-y-8">
+          <div class="bg-green-50 p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestro Enfoque Cooperativo</h3>
+            <p class="text-gray-600 mb-4">
+              Como cooperativa, creemos en el poder de la participación colectiva. Nuestro modelo de negocio se basa en la colaboración y el beneficio mutuo, donde cada asociado es parte fundamental de nuestra organización.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                <span class="text-gray-600">Participación democrática en la toma de decisiones</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                <span class="text-gray-600">Beneficios compartidos entre todos los asociados</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-check-circle text-green-600 mt-1"></i>
+                <span class="text-gray-600">Compromiso con el desarrollo local</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Historia</h3>
+            <p class="text-gray-600">
+               la Cooperativa Dalmacio Vélez nació del sueño de un grupo de vecinos comprometidos con mejorar la calidad de vida de su comunidad. Desde entonces, hemos crecido y evolucionado, pero mantenemos intactos nuestros principios fundacionales de servicio y compromiso con la comunidad.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <div class="bg-green-50 p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Misión</h3>
+            <p class="text-gray-600 mb-4">
+              Proporcionar servicios energéticos de calidad que contribuyan al bienestar de nuestros asociados y al progreso de la región, manteniendo un compromiso constante con la excelencia y la innovación.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-bolt text-green-600 mt-1"></i>
+                <span class="text-gray-600">Suministro de energía confiable y eficiente</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-bolt text-green-600 mt-1"></i>
+                <span class="text-gray-600">Atención personalizada a cada asociado</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <i class="fas fa-bolt text-green-600 mt-1"></i>
+                <span class="text-gray-600">Desarrollo sostenible de la comunidad</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-green-50 p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Visión</h3>
+            <p class="text-gray-600">
+              Ser líderes en la prestación de servicios energéticos, innovando y adaptándonos a las necesidades de nuestra comunidad, manteniendo siempre nuestros valores cooperativos y el compromiso con el desarrollo local.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="bg-green-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Nuestros Valores</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-handshake text-white text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Cooperación</h4>
+            <p class="text-gray-600">Trabajamos juntos para lograr objetivos comunes, valorando la participación y el esfuerzo colectivo.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-heart text-white text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Compromiso</h4>
+            <p class="text-gray-600">Nos dedicamos a servir a nuestra comunidad con pasión y responsabilidad.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-lightbulb text-white text-2xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Innovación</h4>
+            <p class="text-gray-600">Buscamos constantemente nuevas formas de mejorar y crecer, adaptándonos a los cambios.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Section -->
+  <section id="servicios" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestra comunidad
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Energía Eléctrica</h3>
+          <p class="text-gray-600 mb-6">
+            Distribución y mantenimiento del servicio eléctrico en la localidad, garantizando un suministro confiable y eficiente.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Instalaciones nuevas
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Mantenimiento preventivo
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Atención de emergencias
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-wifi"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Internet por Fibra Óptica</h3>
+          <p class="text-gray-600 mb-6">
+            Conectividad de alta velocidad para hogares y empresas, con la mejor tecnología en fibra óptica.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Alta velocidad
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Conexión estable
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Soporte técnico 24/7
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-tv"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Televisión por Cable</h3>
+          <p class="text-gray-600 mb-6">
+            Acceso a una amplia variedad de canales y contenido audiovisual de calidad.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Canales HD
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Contenido premium
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Programación variada
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Telefonía Fija</h3>
+          <p class="text-gray-600 mb-6">
+            Servicios de comunicación telefónica confiables para toda la comunidad.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Líneas residenciales
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Líneas comerciales
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Servicio de emergencia
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-hands-helping"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Servicios Sociales</h3>
+          <p class="text-gray-600 mb-6">
+            Programas y beneficios destinados al bienestar y desarrollo de nuestros asociados.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Programas educativos
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Beneficios especiales
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Apoyo comunitario
+            </li>
+          </ul>
+        </div>
+
+        <div class="service-card bg-white p-8 rounded-xl shadow-lg">
+          <div class="text-green-600 text-4xl mb-6">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-4">Mantenimiento</h3>
+          <p class="text-gray-600 mb-6">
+            Servicios técnicos especializados para garantizar el óptimo funcionamiento de todos nuestros servicios.
+          </p>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Mantenimiento preventivo
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Reparaciones urgentes
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-600 mr-2"></i>
+              Asesoría técnica
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog y Noticias Section -->
+  <section id="blog" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Blog y Noticias</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Mantente informado sobre las últimas novedades y actualizaciones de nuestra cooperativa
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto Section -->
+  <section id="contacto" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Contáctanos</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Estamos aquí para ayudarte. Envíanos tu consulta y nos pondremos en contacto contigo a la brevedad.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <form class="space-y-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Nombre completo</label>
+              <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Tu nombre">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Email</label>
+              <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="tu@email.com">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Teléfono</label>
+              <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="+54 123 456 7890">
+            </div>
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Mensaje</label>
+              <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300 font-medium">
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+
+        <div class="space-y-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-6">Información de Contacto</h3>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium mb-1">Dirección</h4>
+                  <p class="text-gray-600">Hipólito Irigoyen 669, Dalmacio Vélez, Tercero Arriba, Córdoba</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-phone text-green-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium mb-1">Teléfono</h4>
+                  <p class="text-gray-600">+54 9 353 476 7040</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-envelope text-green-600 text-xl"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-lg font-medium mb-1">Email</h4>
+                  <p class="text-gray-600">info@cooperativadalmaciovelez.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-semibold mb-6">Síguenos</h3>
+            <div class="flex space-x-6">
+              <a href="#" class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition duration-300">
+                <i class="fab fa-facebook-f text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition duration-300">
+                <i class="fab fa-instagram text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition duration-300">
+                <i class="fab fa-twitter text-xl"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition duration-300">
+                <i class="fab fa-linkedin-in text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <img src="public/images/logo-cooperativa.png" alt="Cooperativa Dalmacio Vélez" class="h-16 mb-4">
+          <p class="text-gray-400">
+            Más de 30 años brindando servicios de energía eléctrica confiables y soluciones técnicas para tu hogar y negocio.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+            <li><a href="#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+            <li><a href="#nosotros" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
+            <li><a href="#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Servicios</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Energía Eléctrica</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mantenimiento</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Asesoría Técnica</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Proyectos Especiales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-green-500"></i>
+              <span class="text-gray-400">Hipólito Irigoyen 669, Dalmacio Vélez</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-green-500"></i>
+              <span class="text-gray-400">+54 9 353 476 7040</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-green-500"></i>
+              <span class="text-gray-400">info@cooperativadalmaciovelez.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 Cooperativa Dalmacio Vélez. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

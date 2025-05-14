@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Servicios de Energía Solar | Solarix Ingeniería Córdoba</title>
+
+  <!-- Primary Meta Tags -->
+  <meta
+    name="description"
+    content="Instalación, certificación y asesoramiento en sistemas solares fotovoltaicos para tu hogar. Servicio profesional autorizado por ERSEP. Optimiza tu consumo energético."
+  />
+  <meta
+    name="keywords"
+    content="instalación paneles solares, certificación ERSEP, energía solar residencial, ahorro energético hogar, Córdoba"
+  />
+  <meta name="author" content="Solarix Ingeniería" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:url" content="https://tu-dominio.com/servicios"> -->
+  <meta
+    property="og:title"
+    content="Servicios | Solarix Ingeniería"
+  />
+  <meta
+    property="og:description"
+    content="Conoce nuestras soluciones en energía fotovoltaica, mantenimiento, certificaciones y asesoramiento solar. Impulsa tu proyecto fotovoltaico con los expertos de Solarix Ingeniería."
+  />
+  <meta
+    property="og:image"
+    content="public/images/solarix-ingenieria-og-image.webp"
+  />
+  <meta property="og:site_name" content="Solarix Ingeniería" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- <meta name="twitter:url" content="https://tu-dominio.com/servicios"> -->
+  <meta
+    name="twitter:title"
+    content="Servicios | Solarix Ingeniería"
+  />
+  <meta
+    name="twitter:description"
+    content="Descubre nuestras soluciones de energía solar fotovoltaica para viviendas e industrias. Optimiza tu inversión con instalación, mantenimiento y certificaciones de Solarix Ingeniería."
+  />
+  <meta
+    name="twitter:image"
+    content="public/images/solarix-ingenieria-og-image.webp"
+  />
+
+  <!-- Favicon -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="public/images/metaTags/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="public/images/metaTags/favicon-16x16.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="public/images/metaTags/apple-touch-icon.png"
+  />
+
+  <!-- Scripts & Styles -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Canonical -->
+  <!-- <link rel="canonical" href="https://tu-dominio.com/servicios" /> -->
+</head>
+<body>
+  <!-- WhatsApp Button -->
+  <a
+    href="https://api.whatsapp.com/send?phone=5493534767040&text=Hola,%20quiero%20consultar%20sobre%20sus%20servicios."
+    target="_blank"
+    class="fixed bottom-4 right-4 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-lg z-[1000]"
+  >
+    <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+  </a>
+
+  <!-- Top Contact Info (Desktop Only) -->
+  <div
+    class="hidden lg:flex container px-4 text-center text-gray-600 justify-end items-end py-2 space-x-8 w-full"
+  >
+    <p class="text-md">
+      <i class="fa-solid fa-location-dot"></i> Hipólito Irigoyen 669, Dalmacio Vélez, Tercero Arriba, Córdoba. Argentina
+    </p>
+    <p class="text-md">
+      <i class="fa-solid fa-phone"></i> +54 9 353 476 7040
+    </p>
+  </div>
+
+  <!-- Navbar Container -->
+  <nav
+    class="bg-[#004227] shadow-lg py-5 sticky top-0 z-[1000] w-full"
+    x-data="{ open: false }"
+  >
+    <div
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+    >
+      <!-- Left Section: Logo/Brand -->
+      <div class="flex items-center">
+        <a href="inicio" class="flex items-center">
+          <img
+            src="public/images/logo-solarix-ingenieria.webp"
+            alt="Solarix Ingeniería"
+            class="h-20 w-auto"
+          />
+        </a>
+      </div>
+
+      <!-- Right Section: Menu Items & Mobile Toggle -->
+      <div class="flex items-center">
+        <!-- Mobile menu button -->
+        <button
+          @click="open = !open"
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-gray-700 focus:outline-none transition duration-200 lg:hidden"
+          aria-controls="mobile-menu"
+          :aria-expanded="open.toString()"
+        >
+          <!-- Icon when menu is closed -->
+          <svg
+            class="h-6 w-6"
+            x-show="!open"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+          <!-- Icon when menu is open -->
+          <svg
+            class="h-6 w-6"
+            x-show="open"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-8 text-lg font-medium">
+          <a
+            href="inicio"
+            class="text-white hover:text-yellow-400 transition duration-200 flex items-center"
+          >
+            <span>Inicio</span>
+          </a>
+          <a
+            href="servicios"
+            class="text-white hover:text-yellow-400 transition duration-200 flex items-center"
+          >
+            <span>Servicios</span>
+          </a>
+          <a
+            href="sobre-nosotros"
+            class="text-white hover:text-yellow-400 transition duration-200 flex items-center"
+          >
+            <span>Quienes Somos</span>
+          </a>
+          <a
+            href="contacto"
+            class="text-white hover:text-yellow-400 transition duration-200 flex items-center"
+          >
+            <span>Contacto</span>
+          </a>
+          <a
+            href="contacto"
+            class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-black px-4 py-2 rounded-md hover:bg-gradient-to-r hover:from-yellow-500 hover:to-orange-700 transition duration-200"
+          >
+            Contactar Ahora
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      class="lg:hidden"
+      id="mobile-menu"
+      x-show="open"
+      @click.away="open = false"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1 text-lg">
+        <a
+          href="inicio"
+          class="block px-3 py-2 rounded-md text-white hover:bg-white-200 transition duration-200"
+        >
+          Inicio
+        </a>
+        <a
+          href="sobre-nosotros"
+          class="block px-3 py-2 rounded-md text-white hover:bg-white-200 transition duration-200"
+        >
+          Quienes Somos
+        </a>
+        <a
+          href="productos"
+          class="block px-3 py-2 rounded-md text-white hover:bg-white-200 transition duration-200"
+        >
+          Productos
+        </a>
+        <a
+          href="contacto"
+          class="block px-3 py-2 rounded-md text-white hover:bg-white-200 transition duration-200"
+        >
+          Contacto
+        </a>
+        <a
+          href="contacto"
+          class="block px-3 py-2 rounded-md bg-gradient-to-r from-yellow-500 to-yellow-400 text-black hover:bg-gradient-to-r hover:from-yellow-500 hover:to-orange-700 transition duration-200"
+        >
+          Cotización
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION: SERVICIOS -->
+  <section
+    class="bg-cover bg-center py-24 flex items-center px-3"
+    style="min-height: 60vh; background-image: url('public/images/solarix-ingenieria-services-hero-bg.webp');"
+  >
+    <div class="container mx-auto max-w-3xl mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">
+        Nuestros Servicios
+      </h1>
+      <p
+        class="text-lg md:text-xl text-white mb-8 max-w-2xl leading-relaxed"
+      >
+        En Solarix Ingeniería, te ofrecemos soluciones integrales para proyectos
+        de energía fotovoltaica en viviendas, pymes y cooperativas.
+      </p>
+      <a
+        href="contacto"
+        class="bg-white text-black px-8 py-4 mt-4 rounded-lg font-medium hover:bg-gray-200 transition duration-300 inline-block"
+      >
+        Solicita Tu Cotización
+      </a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PRINCIPAL DE SERVICIOS -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Contenido de Servicios -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Servicios para tu Vivienda</h2>
+          <p class="text-gray-600 leading-relaxed mb-8">
+            Transformamos tu hogar en una fuente de energía limpia y renovable. Nuestros servicios están diseñados para maximizar tu ahorro energético mientras contribuyes al cuidado del medio ambiente.
+          </p>
+
+          <!-- Lista de Servicios -->
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="bg-yellow-100 p-3 rounded-full">
+                <i class="fas fa-solar-panel text-yellow-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Evaluación y Diseño</h3>
+                <p class="text-gray-600 text-lg">Analizamos tu consumo energético y diseñamos un sistema solar optimizado para maximizar tu ahorro.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="bg-yellow-100 p-3 rounded-full">
+                <i class="fas fa-tools text-yellow-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Instalación Certificada</h3>
+                <p class="text-gray-600 text-lg">Instalamos tu sistema solar cumpliendo con todas las normativas de seguridad y calidad vigentes.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="bg-yellow-100 p-3 rounded-full">
+                <i class="fas fa-certificate text-yellow-600"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Certificación</h3>
+                <p class="text-gray-600 text-lg">Gestionamos toda la documentación necesaria para certificar tu instalación ante las autoridades.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <a href="contacto" class="bg-gradient-to-r from-yellow-500 to-yellow-400 text-black px-8 py-3 rounded-md hover:bg-gradient-to-r hover:from-yellow-500 hover:to-orange-700 transition duration-200 inline-block">
+              Solicita tu Presupuesto
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="relative">
+          <img
+            src="public/images/servicios-residencia-solar.webp"
+            alt="Servicios de Energía Solar"
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN BENEFICIOS AL CONTRATAR -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+        Beneficios de Elegir Solarix Ingeniería
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Beneficio 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="mb-4">
+            <i class="fa-solid fa-user-shield text-4xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">
+            Confianza y Seguridad
+          </h3>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            Trabajamos con proveedores de renombre y contamos con
+            las certificaciones necesarias para garantizar que tu inversión esté
+            siempre protegida.
+          </p>
+        </div>
+        <!-- Beneficio 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="mb-4">
+            <i class="fa-solid fa-piggy-bank text-4xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">
+            Ahorro a Largo Plazo
+          </h3>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            Un sistema fotovoltaico bien diseñado puede reducir tus facturas
+            eléctricas drásticamente, recuperando rápidamente tu inversión y
+            protegiéndote de futuras subidas de tarifas.
+          </p>
+        </div>
+        <!-- Beneficio 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow">
+          <div class="mb-4">
+            <i class="fa-solid fa-seedling text-4xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-700 mb-2">
+            Sostenibilidad y Responsabilidad
+          </h3>
+          <p class="text-gray-600 leading-relaxed text-sm">
+            Al optar por la energía solar, contribuyes a reducir la huella de
+            carbono y a conservar el medio ambiente para las generaciones
+            futuras.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN PROCESO DE TRABAJO -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">
+        Nuestro Proceso de Trabajo
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Paso 1 -->
+        <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <div class="mb-4">
+            <i class="fa-solid fa-file-alt text-3xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-2">
+            1. Análisis y Diagnóstico
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Realizamos un estudio previo de tu consumo energético y espacio
+            disponible para definir el tipo de sistema fotovoltaico ideal.
+          </p>
+        </div>
+        <!-- Paso 2 -->
+        <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <div class="mb-4">
+            <i class="fa-solid fa-drafting-compass text-3xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-2">
+            2. Diseño y Planificación
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Con los datos recopilados, nuestro equipo de ingeniería diseña una
+            solución a medida, optimizando cada detalle para asegurar la
+            eficiencia.
+          </p>
+        </div>
+        <!-- Paso 3 -->
+        <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <div class="mb-4">
+            <i class="fa-solid fa-tools text-3xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-2">
+            3. Instalación y Certificación
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Instalamos equipos de primera calidad y emitimos las certificaciones
+            correspondientes, garantizando que tu sistema cumpla los
+            requerimientos oficiales.
+          </p>
+        </div>
+        <!-- Paso 4 -->
+        <div class="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md text-center">
+          <div class="mb-4">
+            <i class="fa-solid fa-heart text-3xl text-yellow-500"></i>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-700 mb-2">
+            4. Mantenimiento y Soporte
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Te acompañamos más allá de la entrega del proyecto con planes de
+            mantenimiento, soporte y asesoría para maximizar la vida útil de tu
+            inversión.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="py-16 bg-[#004227]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">
+        ¿Listo para Comenzar Tu Proyecto Solar?
+      </h2>
+      <p class="text-gray-200 max-w-2xl mx-auto leading-relaxed mb-8 text-xl">
+        En Solarix Ingeniería, te guiamos en cada etapa para asegurar un retorno
+        de inversión favorable y un sistema fotovoltaico de primera categoría.
+        ¡Contáctanos hoy mismo y da el primer paso hacia la libertad energética!
+      </p>
+      <a
+        href="contacto"
+        class="bg-white text-[#004227] px-8 py-4 mt-4 rounded-lg font-medium hover:bg-gray-200 transition duration-300 inline-block"
+      >
+        Contáctanos Ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-100 py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- Logo Container -->
+        <div class="mb-6 md:mb-0">
+          <img
+            src="public/images/logo-solarix-ingenieria-dark.webp"
+            alt="Solarix Ingeniería Logo"
+            class="h-12 md:h-16 w-auto"
+          />
+        </div>
+
+        <!-- Contact Info -->
+        <div class="text-center md:text-right">
+          <p class="text-gray-600 mb-2">Contacto</p>
+          <p class="text-gray-800">+54 9 3534 767040</p>
+          <p class="text-gray-800">ing.solarix@gmail.com</p>
+          <p class="text-gray-800">
+            Hipólito Irigoyen 669, Dalmacio Vélez, Tercero Arriba, Córdoba.
+            Argentina
+          </p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-center mt-8 text-gray-600 text-sm">
+        <p>&copy; 2025 Solarix Ingeniería. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Reemplazar iconos Feather
+    feather.replace();
+  </script>
+</body>
+</html>
