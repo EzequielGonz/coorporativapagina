@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros - Cooperativa Dalmacio Vélez Ltda.</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="Conoce más sobre la historia, misión, visión y valores de la Cooperativa Dalmacio Vélez Ltda. Más de 30 años sirviendo a nuestra comunidad.">
+  <meta name="keywords" content="cooperativa eléctrica, historia cooperativa, misión cooperativa, valores cooperativos, Dalmacio Vélez">
+  <meta name="author" content="Cooperativa Dalmacio Vélez Ltda.">
+  
+  <!-- Tailwind & AlpineJS -->
+  <script src="https://unpkg.com/alpinejs" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="../src/output.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: #3b82f6;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Navbar Container -->
+  <nav class="bg-white shadow-md sticky top-0 z-50" x-data="{ open: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20">
+        <div class="flex items-center">
+          <a href="../index.html" class="flex items-center space-x-4">
+            <img src="https://i.ibb.co/99Fjm2Tq/COOP-EDV-FONDO-TRANSPARENTE.png" alt="Cooperativa Dalmacio Vélez" class="h-16 w-auto">
+            <div class="hidden md:block">
+              <h1 class="text-xl font-bold text-gray-800">Cooperativa Dalmacio Vélez Ltda.</h1>
+              <p class="text-sm text-gray-600">Energía y Servicios</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="../index.html" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Inicio</a>
+          <a href="../index.html#servicios" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Servicios</a>
+          <a href="sobre_nosotros.html" class="nav-link text-blue-600 font-medium">Nosotros</a>
+          <a href="../index.html#contacto" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Contacto</a>
+          <a href="../index.html#contacto" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">
+            Contáctanos
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden flex items-center">
+          <button @click="open = !open" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden" x-show="open" @click.away="open = false" x-transition>
+      <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-lg">
+        <a href="../index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Inicio</a>
+        <a href="../index.html#servicios" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Servicios</a>
+        <a href="sobre_nosotros.html" class="block px-3 py-2 text-blue-600 bg-gray-50 rounded-md">Nosotros</a>
+        <a href="../index.html#contacto" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md">Contacto</a>
+        <a href="../index.html#contacto" class="block px-3 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sobre Nosotros Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Sobre Nosotros</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Conoce más sobre nuestra historia, misión y valores
+        </p>
+      </div>
+
+      <!-- Historia -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div class="space-y-6">
+          <h3 class="text-3xl font-bold text-gray-800">Nuestra Historia</h3>
+          <p class="text-gray-600 text-lg">
+            La Cooperativa Dalmacio Vélez Ltda. nació en 1990 con el objetivo de brindar servicios de energía eléctrica a la comunidad local. Desde entonces, hemos crecido y evolucionado, expandiendo nuestros servicios para incluir internet, televisión por cable y telefonía.
+          </p>
+          <p class="text-gray-600 text-lg">
+            Nuestro compromiso con la comunidad y la excelencia en el servicio nos ha permitido convertirnos en un referente en la región, siempre manteniendo nuestros valores cooperativos y el espíritu de servicio que nos caracteriza.
+          </p>
+        </div>
+        <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://i.ibb.co/CKnFjmVY/dalmaciovelez.jpg" alt="Historia de la Cooperativa" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Misión y Visión -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
+          <img src="https://i.ibb.co/CKnFjmVY/dalmaciovelez.jpg" alt="Misión y Visión" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-6 order-1 md:order-2">
+          <h3 class="text-3xl font-bold text-gray-800">Misión y Visión</h3>
+          <p class="text-gray-600 text-lg">
+            Nuestra misión es proporcionar servicios de calidad que mejoren la vida de nuestros asociados y contribuyan al desarrollo de la comunidad, manteniendo siempre los principios cooperativos de ayuda mutua, responsabilidad, democracia, igualdad, equidad y solidaridad.
+          </p>
+          <p class="text-gray-600 text-lg">
+            Aspiramos a ser líderes en la prestación de servicios, innovando constantemente y adaptándonos a las necesidades cambiantes de nuestra comunidad, siempre con un enfoque sostenible y responsable.
+          </p>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div class="space-y-6">
+          <h3 class="text-3xl font-bold text-gray-800">Nuestros Valores</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Cooperación</h4>
+                <p class="text-gray-600">Trabajamos juntos para lograr objetivos comunes, valorando la participación y el esfuerzo colectivo.</p>
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Compromiso</h4>
+                <p class="text-gray-600">Nos dedicamos a servir a nuestra comunidad con pasión y responsabilidad.</p>
+              </div>
+            </li>
+            <li class="flex items-start space-x-3">
+              <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-gray-800">Innovación</h4>
+                <p class="text-gray-600">Buscamos constantemente nuevas formas de mejorar y crecer, adaptándonos a los cambios.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
+          <img src="https://i.ibb.co/CKnFjmVY/dalmaciovelez.jpg" alt="Valores de la Cooperativa" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Compromiso Social -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative h-[400px] rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
+          <img src="https://i.ibb.co/CKnFjmVY/dalmaciovelez.jpg" alt="Compromiso Social" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-6 order-1 md:order-2">
+          <h3 class="text-3xl font-bold text-gray-800">Compromiso Social</h3>
+          <p class="text-gray-600 text-lg">
+            Como cooperativa, entendemos la importancia de devolver a la comunidad. Por eso, desarrollamos programas sociales y educativos que benefician a nuestros asociados y a la comunidad en general.
+          </p>
+          <p class="text-gray-600 text-lg">
+            Nuestro compromiso con el desarrollo sostenible nos lleva a implementar prácticas responsables y a promover la conciencia ambiental entre nuestros asociados y la comunidad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <img src="https://i.ibb.co/99Fjm2Tq/COOP-EDV-FONDO-TRANSPARENTE.png" alt="Cooperativa Dalmacio Vélez Ltda." class="h-16 mb-4">
+          <p class="text-gray-400">
+            Más de 30 años brindando servicios de energía eléctrica confiables y soluciones técnicas para tu hogar y negocio.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+          <ul class="space-y-2">
+            <li><a href="../index.html" class="text-gray-400 hover:text-white transition duration-300">Inicio</a></li>
+            <li><a href="../index.html#servicios" class="text-gray-400 hover:text-white transition duration-300">Servicios</a></li>
+            <li><a href="sobre_nosotros.html" class="text-gray-400 hover:text-white transition duration-300">Nosotros</a></li>
+            <li><a href="../index.html#contacto" class="text-gray-400 hover:text-white transition duration-300">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Servicios</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Energía Eléctrica</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mantenimiento</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Asesoría Técnica</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Proyectos Especiales</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-map-marker-alt text-blue-500"></i>
+              <span class="text-gray-400">Juana Azurduy 270, Dalmacio Vélez, Argentina, 5919</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-phone text-blue-500"></i>
+              <span class="text-gray-400">0353-429-8374</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fas fa-envelope text-blue-500"></i>
+              <span class="text-gray-400">cooperativadalmaciovelez@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 Cooperativa Dalmacio Vélez Ltda. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
